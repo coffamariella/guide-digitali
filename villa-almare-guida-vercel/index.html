@@ -184,6 +184,18 @@
     .btn-outline { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: rgba(255,255,255,.8); border: 1px solid rgba(255,255,255,.25); font-size: 12.5px; padding: 10px 20px; border-radius: 40px; text-decoration: none; transition: all .2s; }
     .btn-outline:hover { background: rgba(255,255,255,.1); color: #fff; text-decoration: none; }
 
+    /* ─── ADDRESS BOX ─── */
+    .addr-box { display: flex; align-items: center; gap: 14px; background: var(--sand); border-radius: 10px; padding: 16px 20px; margin-bottom: 20px; flex-wrap: wrap; }
+    .addr-icon { font-size: 24px; flex-shrink: 0; }
+    .addr-text { flex: 1; font-size: 13px; color: var(--text-mid); min-width: 160px; }
+    .addr-text strong { color: var(--navy); display: block; margin-bottom: 2px; }
+    .addr-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-map { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 7px 14px; border-radius: 40px; text-decoration: none; transition: all .2s; white-space: nowrap; }
+    .btn-map-g { background: var(--navy); color: #fff; }
+    .btn-map-g:hover { background: #2a5068; color: #fff; text-decoration: none; }
+    .btn-map-a { background: #fff; color: var(--navy); border: 1px solid var(--sand-dark); }
+    .btn-map-a:hover { background: var(--sand-dark); color: var(--navy); text-decoration: none; }
+
     /* ─── FOOTER ─── */
     .footer { background: var(--navy-dark); color: rgba(255,255,255,.45); text-align: center; padding: 32px 24px; font-size: 12px; letter-spacing: .06em; }
     .footer strong { color: var(--gold); }
@@ -332,6 +344,19 @@
           <span class="it">Rete Wi-Fi: </span><span class="en">Wi-Fi Network: </span>
           <strong>Villa Almarè</strong><br>
           Password: <strong>villaalmare2025</strong>
+        </div>
+      </div>
+
+      <!-- Indirizzo + mappa -->
+      <div class="addr-box">
+        <div class="addr-icon">📍</div>
+        <div class="addr-text">
+          <strong>Villa Almarè</strong>
+          Via Grado 5, Fontane Bianche, Siracusa 96100
+        </div>
+        <div class="addr-btns">
+          <a href="https://www.google.com/maps/search/?api=1&query=Via+Grado+5,+Fontane+Bianche,+Siracusa" target="_blank" class="btn-map btn-map-g">🗺 Google Maps</a>
+          <a href="https://maps.apple.com/?q=Via+Grado+5,+Fontane+Bianche,+Siracusa,+Italy" target="_blank" class="btn-map btn-map-a">🍎 Apple Maps</a>
         </div>
       </div>
 
@@ -1255,7 +1280,7 @@
     <a href="tel:+393515522487">📞 +39 351 552 2487</a>
   </div>
   <div class="footer-div"></div>
-  <p>© 2025 <strong>Villa Almarè</strong> · Via Grado 5, Fontane Bianche, Siracusa 96100</p>
+  <p>© 2025 <strong>Villa Almarè</strong> · <a href="https://www.google.com/maps/search/?api=1&query=Via+Grado+5,+Fontane+Bianche,+Siracusa" target="_blank" style="color:rgba(255,255,255,.45);">Via Grado 5, Fontane Bianche, Siracusa 96100</a></p>
   <p style="margin-top:5px;">
     <span class="it">Questa guida è riservata agli ospiti della villa</span>
     <span class="en">This guide is reserved for villa guests</span>
