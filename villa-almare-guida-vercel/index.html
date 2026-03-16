@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Guide — Villa Almarè · Fontane Bianche</title>
+  <meta name="description" content="Guida digitale per gli ospiti di Villa Almarè, Via Grado 5, Fontane Bianche, Siracusa.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+  <!-- Lingua applicata subito per evitare flash di testo IT su chi ha scelto EN/DE -->
+  <script>
+    (function(){try{var l=localStorage.getItem('va-lang');if(l==='en'){document.documentElement.classList.add('lang-en');document.documentElement.lang='en';}else if(l==='de'){document.documentElement.classList.add('lang-de');document.documentElement.lang='de';}}catch(e){}})();
+  </script>
+
+  <style>
+    :root {
+      --navy:       #1B3A4B;
+      --navy-dark:  #122733;
+      --gold:       #C9A96E;
+      --gold-light: #D4BA8A;
+      --sand:       #F5EFE6;
+      --sand-dark:  #EDE3D5;
+      --white:      #FFFFFF;
+      --cream:      #faf9f7;
+      --text:       #1A1A2E;
+      --text-mid:   #4A5568;
+      --text-light: #718096;
+      --radius:     14px;
+      --shadow:     0 4px 24px rgba(27,58,75,.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 15px; }
+    body { font-family: 'Montserrat', sans-serif; font-weight: 300; color: var(--text); background: var(--cream); line-height: 1.8; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--navy); text-decoration: underline; }
+    ul { list-style: none; }
+    h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.2; }
+    h1 { font-size: clamp(34px, 7vw, 64px); }
+    h3 { font-size: clamp(18px, 3vw, 26px); }
+    h4 { font-size: clamp(15px, 2vw, 19px); font-weight: 400; }
+    .tag { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold-light); border-radius: 40px; padding: 5px 16px; margin-bottom: 14px; }
+
+    /* ── Language switching ── */
+    .en, .de { display: none; }
+    html.lang-en .it  { display: none !important; }
+    html.lang-en .de  { display: none !important; }
+    html.lang-en span.en { display: inline; }
+    html.lang-en div.en  { display: block; }
+    html.lang-en p.en    { display: block; }
+    html.lang-de .it  { display: none !important; }
+    html.lang-de .en  { display: none !important; }
+    html.lang-de span.de { display: inline; }
+    html.lang-de div.de  { display: block; }
+    html.lang-de p.de    { display: block; }
+
+    /* Language toggle */
+    .lang-toggle { display: flex; align-items: center; gap: 5px; }
+    .lang-btn { font-size: 11px; font-weight: 600; letter-spacing: .08em; color: rgba(255,255,255,.45); background: transparent; border: 1px solid rgba(255,255,255,.2); border-radius: 4px; padding: 4px 8px; cursor: pointer; transition: all .2s; font-family: 'Montserrat', sans-serif; }
+    .lang-btn.active { color: var(--gold); border-color: var(--gold); }
+    .lang-btn:hover:not(.active) { color: rgba(255,255,255,.7); border-color: rgba(255,255,255,.35); }
+
+    /* ─── TOP BAR ─── */
+    .topbar { background: var(--navy); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 16px rgba(0,0,0,.2); }
+    .topbar-brand { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500; color: #fff; letter-spacing: .06em; }
+    .topbar-brand span { color: var(--gold); }
+    .topbar-sub { font-size: 10px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-top: 2px; }
+
+    /* ─── HERO ─── */
+    .hero { background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 55%, #2a5068 100%); padding: 70px 24px 60px; text-align: center; color: #fff; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23C9A96E' opacity='.15'/%3E%3C/svg%3E") repeat; pointer-events: none; }
+    .hero-emoji { font-size: 40px; margin-bottom: 14px; }
+    .hero h1 { color: #fff; margin-bottom: 10px; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero-sub { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.55); margin-bottom: 22px; }
+    .hero-desc { max-width: 540px; margin: 0 auto; color: rgba(255,255,255,.78); font-size: 13.5px; line-height: 1.9; }
+
+    /* ─── TILES GRID ─── */
+    .tiles-wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 60px; }
+    .tiles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .tile { background: var(--white); border: 1px solid var(--sand-dark); border-radius: var(--radius); padding: 24px 8px 16px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; text-align: center; box-shadow: var(--shadow); transition: all .2s; }
+    .tile:hover { background: var(--sand); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(27,58,75,.13); }
+    .tile:active { transform: translateY(0); }
+    .tile-icon { width: 76px; height: 76px; border-radius: 50%; background: var(--sand); display: flex; align-items: center; justify-content: center; font-size: 36px; border: 2px solid var(--sand-dark); transition: all .2s; }
+    .tile:hover .tile-icon { background: var(--navy); border-color: var(--navy); }
+    .tile-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; line-height: 1.3; color: var(--text-mid); letter-spacing: .02em; }
+
+    /* ─── MODAL OVERLAY ─── */
+    .panel-overlay { display: none; position: fixed; inset: 0; z-index: 500; background: rgba(18,39,51,.55); backdrop-filter: blur(3px); animation: fadeOverlay .2s ease; }
+    .panel-overlay.open { display: flex; align-items: stretch; }
+    @keyframes fadeOverlay { from { opacity: 0; } to { opacity: 1; } }
+    .panel-box { background: var(--cream); width: 100%; max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; max-height: 100vh; animation: slideUp .25s ease; }
+    @keyframes slideUp { from { transform: translateY(30px); opacity: .6; } to { transform: translateY(0); opacity: 1; } }
+    .panel-hd { background: var(--navy); padding: 16px 20px; display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+    .panel-hd-icon { width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .panel-hd-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: #fff; flex: 1; line-height: 1.2; }
+    .panel-close { background: rgba(255,255,255,.1); border: none; color: #fff; font-size: 18px; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; flex-shrink: 0; transition: background .2s; display: flex; align-items: center; justify-content: center; }
+    .panel-close:hover { background: rgba(255,255,255,.2); }
+    .panel-bd { overflow-y: auto; padding: 22px 22px 36px; flex: 1; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ─── CHECKIN CONTENT ─── */
+    .wifi-box { background: linear-gradient(135deg, var(--navy) 0%, #2a5068 100%); border-radius: 10px; padding: 18px 20px; display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .wifi-icon { font-size: 26px; }
+    .wifi-body { font-size: 13px; color: rgba(255,255,255,.8); }
+    .wifi-body strong { color: var(--gold); font-size: 14px; }
+    .rule-grid { display: grid; gap: 12px; }
+    .rule-card { border: 1px solid var(--sand-dark); border-radius: 10px; padding: 18px 20px; border-left: 4px solid var(--gold); }
+    .rule-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .rule-card-icon { font-size: 20px; }
+    .rule-card h4 { color: var(--navy); font-size: 16px; }
+    .rule-card ul { margin-top: 4px; }
+    .rule-card li { font-size: 13px; color: var(--text-mid); padding: 3px 0 3px 16px; position: relative; }
+    .rule-card li::before { content: '·'; color: var(--gold); position: absolute; left: 0; font-weight: 700; }
+    .contact-strip { margin-top: 20px; background: var(--sand); border-radius: 10px; padding: 18px 20px; text-align: center; }
+    .contact-strip p { font-size: 12.5px; color: var(--text-mid); margin-bottom: 12px; }
+    .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: #fff; font-weight: 600; font-size: 12.5px; padding: 11px 24px; border-radius: 40px; letter-spacing: .06em; text-decoration: none; transition: background .2s; }
+    .btn-gold:hover { background: var(--gold); color: var(--navy); text-decoration: none; }
+
+    /* ─── RESTAURANTS ─── */
+    .resto-grid { display: grid; gap: 16px; }
+    .resto-card { border: 1px solid var(--sand-dark); border-radius: 10px; overflow: hidden; display: grid; grid-template-columns: 5px 1fr; }
+    .resto-accent { background: var(--gold); }
+    .resto-body { padding: 18px 20px; }
+    .resto-head { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+    .resto-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--navy); font-weight: 500; }
+    .resto-price { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); background: #fff8f0; border: 1px solid var(--gold-light); border-radius: 40px; padding: 3px 10px; white-space: nowrap; }
+    .resto-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+    .resto-tag { font-size: 11.5px; color: var(--text-light); display: flex; align-items: center; gap: 4px; }
+    .resto-desc { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+    .resto-hours { margin-top: 10px; font-size: 12px; color: var(--text-light); }
+    .tip-box { margin-top: 16px; background: var(--sand); border-radius: 10px; padding: 16px 18px; border-left: 4px solid var(--gold); font-size: 13px; color: var(--text-mid); }
+    .tip-box strong { color: var(--navy); }
+    .sec-label { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 12px; font-weight: 500; }
+
+    /* ─── BEACH / ACTIVITIES ─── */
+    .beach-feature { background: linear-gradient(135deg, var(--navy) 0%, #2a5068 100%); border-radius: 10px; padding: 28px 24px; text-align: center; margin-bottom: 16px; }
+    .beach-feature h3 { color: #fff; margin-bottom: 10px; font-size: 24px; }
+    .beach-feature p { color: rgba(255,255,255,.75); font-size: 13.5px; max-width: 480px; margin: 0 auto 16px; }
+    .badge-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+    .badge { background: rgba(201,169,110,.15); border: 1px solid rgba(201,169,110,.3); border-radius: 40px; padding: 5px 14px; font-size: 11.5px; color: rgba(255,255,255,.8); }
+    .activity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+    .activity-card { border: 1px solid var(--sand-dark); border-radius: 10px; padding: 22px 18px; text-align: center; border-bottom: 3px solid var(--gold); }
+    .activity-icon { font-size: 32px; margin-bottom: 10px; }
+    .activity-card h4 { color: var(--navy); margin-bottom: 6px; }
+    .activity-card p { font-size: 12.5px; color: var(--text-mid); line-height: 1.65; }
+    .link-row { margin-top: 8px; font-size: 11.5px; }
+
+    /* ─── ATTRACTIONS ─── */
+    .attraction-list { display: grid; gap: 12px; }
+    .attraction-item { display: flex; gap: 18px; align-items: flex-start; border: 1px solid var(--sand-dark); border-radius: 10px; padding: 18px 20px; }
+    .att-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: var(--gold); line-height: 1; flex-shrink: 0; width: 40px; text-align: center; }
+    .att-body h4 { color: var(--navy); margin-bottom: 5px; font-size: 17px; }
+    .att-body p { font-size: 12.5px; color: var(--text-mid); line-height: 1.7; }
+    .att-dist { font-size: 10.5px; font-weight: 600; letter-spacing: .1em; color: var(--gold); text-transform: uppercase; margin-top: 6px; }
+
+    /* ─── SHOPS ─── */
+    .shop-list { display: grid; gap: 12px; }
+    .shop-item { display: flex; gap: 14px; align-items: flex-start; border: 1px solid var(--sand-dark); border-radius: 10px; padding: 18px 20px; }
+    .shop-icon-wrap { width: 44px; height: 44px; border-radius: 50%; background: var(--sand); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .shop-info h4 { color: var(--navy); margin-bottom: 4px; font-size: 17px; }
+    .shop-info p { font-size: 13px; color: var(--text-mid); line-height: 1.65; }
+    .shop-chip { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: var(--sand); color: var(--navy); border-radius: 40px; padding: 3px 10px; margin-top: 6px; margin-right: 4px; }
+
+    /* ─── EMERGENCY ─── */
+    .sos-banner { background: #b91c1c; border-radius: 10px; padding: 20px 24px; display: flex; align-items: center; gap: 18px; margin-bottom: 16px; }
+    .sos-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #fff; font-weight: 600; line-height: 1; }
+    .sos-label { font-size: 13px; color: rgba(255,255,255,.85); }
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .info-card { border: 1px solid var(--sand-dark); border-radius: 10px; padding: 18px 18px; }
+    .info-card-icon { font-size: 22px; margin-bottom: 8px; }
+    .info-card h4 { color: var(--navy); margin-bottom: 8px; font-size: 15px; }
+    .info-card p, .info-card li { font-size: 12.5px; color: var(--text-mid); }
+    .info-card li { padding: 2px 0; }
+    .info-card li::before { content: '·'; color: var(--gold); margin-right: 6px; font-weight: 700; }
+    .contact-block { background: var(--navy); border-radius: 10px; padding: 24px 20px; text-align: center; }
+    .contact-block p { font-size: 13px; color: rgba(255,255,255,.75); margin-bottom: 14px; }
+    .contact-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+    .btn-wa { display: inline-flex; align-items: center; gap: 6px; background: var(--gold); color: var(--navy); font-weight: 600; font-size: 12.5px; padding: 10px 20px; border-radius: 40px; text-decoration: none; transition: all .2s; }
+    .btn-wa:hover { background: #d4b07a; text-decoration: none; }
+    .btn-outline { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: rgba(255,255,255,.8); border: 1px solid rgba(255,255,255,.25); font-size: 12.5px; padding: 10px 20px; border-radius: 40px; text-decoration: none; transition: all .2s; }
+    .btn-outline:hover { background: rgba(255,255,255,.1); color: #fff; text-decoration: none; }
+
+    /* ─── FOOTER ─── */
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.45); text-align: center; padding: 32px 24px; font-size: 12px; letter-spacing: .06em; }
+    .footer strong { color: var(--gold); }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin-bottom: 14px; }
+    .footer-links a { color: rgba(255,255,255,.6); font-size: 12.5px; }
+    .footer-links a:hover { color: var(--gold); text-decoration: none; }
+    .footer-div { width: 40px; height: 1px; background: rgba(201,169,110,.25); margin: 12px auto; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 520px) {
+      .hero { padding: 28px 16px 24px; }
+      .hero-emoji { font-size: 28px; margin-bottom: 8px; }
+      .hero h1 { font-size: 24px; margin-bottom: 6px; }
+      .hero-sub { margin-bottom: 10px; }
+      .hero-desc { font-size: 12px; line-height: 1.7; }
+      .tiles-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .tiles-wrap { padding: 20px 14px 40px; }
+      .tile { padding: 18px 8px 14px; gap: 8px; }
+      .tile-icon { width: 56px; height: 56px; font-size: 26px; }
+      .panel-hd-title { font-size: 17px; }
+      .panel-bd { padding: 16px 16px 32px; }
+      .attraction-item { flex-direction: column; gap: 6px; }
+      .att-num { width: auto; }
+      .sos-banner { flex-direction: column; text-align: center; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── TOP BAR ─── -->
+<header class="topbar">
+  <div>
+    <div class="topbar-brand">Villa Almar<span>è</span></div>
+    <div class="topbar-sub">
+      <span class="it">Guida Ospiti · Fontane Bianche</span>
+      <span class="en">Guest Guide · Fontane Bianche</span>
+    </div>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-it" onclick="setLang('it')">IT</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-de" onclick="setLang('de')">DE</button>
+  </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-emoji">🌊</div>
+  <div class="tag">
+    <span class="it">Benvenuti a Villa Almarè</span>
+    <span class="en">Welcome to Villa Almarè</span>
+    <span class="de">Willkommen in der Villa Almarè</span>
+  </div>
+  <h1>
+    <span class="it">La vostra casa<br>in <em>Sicilia</em></span>
+    <span class="en">Your home<br>in <em>Sicily</em></span>
+    <span class="de">Ihr Zuhause<br>in <em>Sizilien</em></span>
+  </h1>
+  <p class="hero-sub">
+    <span class="it">Fontane Bianche · Siracusa · Italia</span>
+    <span class="en">Fontane Bianche · Siracusa · Italy</span>
+    <span class="de">Fontane Bianche · Siracusa · Italien</span>
+  </p>
+  <p class="hero-desc">
+    <span class="it">Siamo felici di avervi ospiti. Questa guida è pensata per rendere il vostro soggiorno il più piacevole e sereno possibile — dal check-in alle escursioni, dai ristoranti alle spiagge cristalline a pochi passi dalla villa.</span>
+    <span class="en">We are delighted to have you as our guests. This guide is designed to make your stay as pleasant and carefree as possible — from check-in to excursions, from restaurants to the crystal-clear beaches just steps from the villa.</span>
+    <span class="de">Wir freuen uns, Sie als Gäste begrüßen zu dürfen. Dieser Leitfaden soll Ihren Aufenthalt so angenehm wie möglich gestalten — vom Check-in bis zu Ausflügen, von Restaurants bis hin zu den kristallklaren Stränden direkt vor der Villa.</span>
+  </p>
+</section>
+
+<!-- ─── TILES GRID ─── -->
+<div class="tiles-wrap">
+  <div class="tiles-grid">
+    <button class="tile" onclick="openPanel('checkin')">
+      <div class="tile-icon">🔑</div>
+      <div class="tile-label">
+        <span class="it">Check-in &amp; Regole</span>
+        <span class="en">Check-in &amp; Rules</span>
+        <span class="de">Check-in &amp; Regeln</span>
+      </div>
+    </button>
+    <button class="tile" onclick="openPanel('mangiare')">
+      <div class="tile-icon">🍽️</div>
+      <div class="tile-label">
+        <span class="it">Dove mangiare</span>
+        <span class="en">Where to Eat</span>
+        <span class="de">Restaurants</span>
+      </div>
+    </button>
+    <button class="tile" onclick="openPanel('mare')">
+      <div class="tile-icon">🏖️</div>
+      <div class="tile-label">
+        <span class="it">Spiagge &amp; Mare</span>
+        <span class="en">Beaches &amp; Sea</span>
+        <span class="de">Strände &amp; Meer</span>
+      </div>
+    </button>
+    <button class="tile" onclick="openPanel('attrazioni')">
+      <div class="tile-icon">🏛️</div>
+      <div class="tile-label">
+        <span class="it">Attrazioni</span>
+        <span class="en">Attractions</span>
+        <span class="de">Sehenswürdigkeiten</span>
+      </div>
+    </button>
+    <button class="tile" onclick="openPanel('spesa')">
+      <div class="tile-icon">🛒</div>
+      <div class="tile-label">
+        <span class="it">Spesa &amp; Servizi</span>
+        <span class="en">Shopping &amp; Services</span>
+        <span class="de">Einkaufen</span>
+      </div>
+    </button>
+    <button class="tile" onclick="openPanel('emergenze')">
+      <div class="tile-icon">🚨</div>
+      <div class="tile-label">
+        <span class="it">Emergenze</span>
+        <span class="en">Emergencies</span>
+        <span class="de">Notfälle</span>
+      </div>
+    </button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     MODAL 1 — CHECK-IN
+══════════════════════════════════════ -->
+<div class="panel-overlay" id="panel-checkin" onclick="overlayClose(event,this)">
+  <div class="panel-box">
+    <div class="panel-hd">
+      <div class="panel-hd-icon">🔑</div>
+      <div class="panel-hd-title">
+        <span class="it">Check-in &amp; Regole della casa</span>
+        <span class="en">Check-in &amp; House Rules</span>
+        <span class="de">Check-in &amp; Hausregeln</span>
+      </div>
+      <button class="panel-close" onclick="closePanel('checkin')">✕</button>
+    </div>
+    <div class="panel-bd">
+
+      <!-- WiFi -->
+      <div class="wifi-box">
+        <div class="wifi-icon">📶</div>
+        <div class="wifi-body">
+          <span class="it">Rete Wi-Fi: </span><span class="en">Wi-Fi Network: </span>
+          <strong>Villa Almarè</strong><br>
+          Password: <strong>villaalmare2025</strong>
+        </div>
+      </div>
+
+      <!-- IT content -->
+      <div class="it">
+        <div class="rule-grid">
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🕔</span><h4>Check-in e Check-out</h4></div>
+            <ul>
+              <li>Check-in: dalle <strong>16:00</strong> alle <strong>22:00</strong></li>
+              <li>Check-out: entro le <strong>10:00</strong></li>
+              <li>Al check-in: <strong>documento di identità</strong> per ciascun ospite</li>
+              <li>Al check-in: pagamento <strong>tassa di soggiorno</strong> in contanti</li>
+              <li>Al check-in: versamento in <strong>contanti</strong> di un <strong>deposito cauzionale di €500</strong>, che sarà restituito al check-out previa verifica delle condizioni della villa</li>
+            </ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🏊</span><h4>Piscina</h4></div>
+            <ul><li>Si prega di fare la doccia prima di entrare in piscina</li></ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">♻️</span><h4>Raccolta differenziata</h4></div>
+            <ul><li>La raccolta differenziata è obbligatoria</li></ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🧹</span><h4>Prima di partire</h4></div>
+            <ul>
+              <li>Lavare e riporre le <strong>stoviglie</strong></li>
+              <li>Spegnere aria condizionata, luci e tutti gli elettrodomestici</li>
+              <li>Segnalare eventuali danni prima di partire</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-strip">
+          <p>Per qualsiasi necessità siamo sempre disponibili</p>
+          <a href="https://wa.me/message/F3Z67R53OTYYF1" class="btn-gold">💬 Contattaci su WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- DE content -->
+      <div class="de">
+        <div class="rule-grid">
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🕔</span><h4>Check-in und Check-out</h4></div>
+            <ul>
+              <li>Check-in: von <strong>16:00 Uhr</strong> bis <strong>22:00 Uhr</strong></li>
+              <li>Check-out: bis <strong>10:00 Uhr</strong></li>
+              <li>Beim Check-in: gültiger <strong>Lichtbildausweis</strong> für jeden Gast</li>
+              <li>Beim Check-in: <strong>Kurtaxe</strong> in bar</li>
+              <li>Beim Check-in: <strong>Kaution von 500 € in bar</strong>, wird beim Check-out nach Überprüfung der Villa zurückerstattet</li>
+            </ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🏊</span><h4>Schwimmbad</h4></div>
+            <ul><li>Bitte duschen Sie vor dem Betreten des Pools</li></ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">♻️</span><h4>Mülltrennung</h4></div>
+            <ul><li>Mülltrennung ist Pflicht</li></ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🧹</span><h4>Vor der Abreise</h4></div>
+            <ul>
+              <li><strong>Geschirr</strong> spülen und wegräumen</li>
+              <li>Klimaanlage, Lichter und alle Geräte ausschalten</li>
+              <li>Eventuelle Schäden vor der Abreise melden</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-strip">
+          <p>Bei Bedarf stehen wir jederzeit zur Verfügung</p>
+          <a href="https://wa.me/message/F3Z67R53OTYYF1" class="btn-gold">💬 WhatsApp kontaktieren</a>
+        </div>
+      </div>
+
+      <!-- EN content -->
+      <div class="en">
+        <div class="rule-grid">
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🕔</span><h4>Check-in and Check-out</h4></div>
+            <ul>
+              <li>Check-in: from <strong>4:00 PM</strong> to <strong>10:00 PM</strong></li>
+              <li>Check-out: by <strong>10:00 AM</strong></li>
+              <li>At check-in: valid <strong>ID document</strong> for each guest</li>
+              <li>At check-in: <strong>tourist tax</strong> paid in cash</li>
+              <li>At check-in: <strong>cash security deposit of €500</strong>, refunded at check-out subject to villa inspection</li>
+            </ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🏊</span><h4>Swimming Pool</h4></div>
+            <ul><li>Please shower before entering the pool</li></ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">♻️</span><h4>Waste Sorting</h4></div>
+            <ul><li>Waste sorting is mandatory</li></ul>
+          </div>
+          <div class="rule-card">
+            <div class="rule-card-header"><span class="rule-card-icon">🧹</span><h4>Before Departure</h4></div>
+            <ul>
+              <li>Wash and put away all <strong>dishes</strong></li>
+              <li>Turn off air conditioning, lights and all appliances</li>
+              <li>Report any damages before departure</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-strip">
+          <p>For any assistance we are always available</p>
+          <a href="https://wa.me/message/F3Z67R53OTYYF1" class="btn-gold">💬 Contact us on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     MODAL 2 — DOVE MANGIARE / WHERE TO EAT
+══════════════════════════════════════ -->
+<div class="panel-overlay" id="panel-mangiare" onclick="overlayClose(event,this)">
+  <div class="panel-box">
+    <div class="panel-hd">
+      <div class="panel-hd-icon">🍽️</div>
+      <div class="panel-hd-title">
+        <span class="it">Dove mangiare nei dintorni</span>
+        <span class="en">Where to Eat Nearby</span>
+        <span class="de">Restaurants in der Umgebung</span>
+      </div>
+      <button class="panel-close" onclick="closePanel('mangiare')">✕</button>
+    </div>
+    <div class="panel-bd">
+
+      <!-- IT -->
+      <div class="it">
+        <p class="sec-label">🍽️ Ristoranti &amp; Cucina</p>
+        <div class="resto-grid" style="margin-bottom:24px;">
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Malafemmina · Ristorante &amp; Lounge Bar</div><div class="resto-price">€€€ · Elegante</div></div>
+            <div class="resto-meta"><span class="resto-tag">🦞 Alta cucina di mare</span><span class="resto-tag">📍 ~600m · Viale dei Lidi 473</span></div>
+            <p class="resto-desc">Cucina gourmet con il pescato del giorno in una sala da 350 coperti con vista mare. Lounge bar con cocktail selezionati e aperitivi al tramonto indimenticabili. Si consiglia la prenotazione.</p>
+            <div class="resto-hours">📞 +39 0931 790317 · <a href="https://www.malafemminaristorante.it" style="font-size:12px;">malafemminaristorante.it</a></div>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Naos · Lounge Bar &amp; Restaurant</div><div class="resto-price">€€ · Medio</div></div>
+            <div class="resto-meta"><span class="resto-tag">🐟 Pesce &amp; Mediterraneo</span><span class="resto-tag">📍 Viale dei Lidi, Fontane Bianche</span></div>
+            <p class="resto-desc">Ristorante con lounge bar sul mare, cucina italiana e mediterranea. Specialità: pesce fresco, antipasti, burrata. Ottimo anche per un aperitivo. Molto apprezzato dai visitatori (4.3/5).</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">La Capannina da Gino</div><div class="resto-price">€€ · Medio</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍕 Pesce &amp; Pizzeria</span><span class="resto-tag">📍 Viale dei Lidi, Fontane Bianche</span></div>
+            <p class="resto-desc">Uno dei locali storici di Fontane Bianche, a due passi dal mare. Ottimo pesce fresco, pizze e piatti tipici siciliani. Accogliente, adatto a famiglie e gruppi. Aperto a pranzo e cena. (949 recensioni, 4.0/5)</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Camomilla · Osteria sul Mare</div><div class="resto-price">€€ · Medio</div></div>
+            <div class="resto-meta"><span class="resto-tag">🌊 Ristorante vista mare</span><span class="resto-tag">📍 Via Arianna, Fontane Bianche</span></div>
+            <p class="resto-desc">Ristorante panoramico all'interno del Lido Camomilla. Ambiente raffinato, cucina di mare con vista sulle acque cristalline di Fontane Bianche.</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Fontane Bianche Beach Bar</div><div class="resto-price">€ · Economico</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍝 Cucina siciliana tradizionale</span><span class="resto-tag">📍 ~400m · Viale dei Lidi 441</span></div>
+            <p class="resto-desc">La tipica trattoria locale: piatti di terra e di mare della tradizione siciliana, cibo genuino a prezzi onesti. Atmosfera informale e familiare.</p>
+            <div class="resto-hours">💰 Prezzo medio: €15–25 a persona</div>
+          </div></div>
+
+        </div>
+        <p class="sec-label">🏖️ Lidi &amp; Pizzerie sul mare</p>
+        <div class="resto-grid" style="margin-bottom:24px;">
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Marama Food · Drink · Sea</div><div class="resto-price">€€ · Medio</div></div>
+            <div class="resto-meta"><span class="resto-tag">🐟 Pesce &amp; Pizzeria</span><span class="resto-tag">📍 ~450m · Via Vega</span></div>
+            <p class="resto-desc">Sul mare: colazione, pranzo con pesce fresco, aperitivi e pizze a legna la sera. Ingredienti freschi, atmosfera rilassata.</p>
+            <div class="resto-hours">🕗 8:00–15:00 · 17:00–00:30 · <a href="https://www.maramasiracusa.it" style="font-size:12px;">maramasiracusa.it</a></div>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Lido Sayonara · Ristorante &amp; Pizzeria</div><div class="resto-price">€€ · Medio</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍕 Pizzeria &amp; Rosticceria</span><span class="resto-tag">📍 Viale dei Lidi 523, Fontane Bianche</span></div>
+            <p class="resto-desc">Lido balneare con ristorante e pizzeria sul mare. Pizza apprezzata dai clienti, bar con panini, aperitivi, caffè e gelato. Ampio spazio all'aperto.</p>
+          </div></div>
+
+        </div>
+        <p class="sec-label">☕ Bar · Caffè · Gelaterie</p>
+        <div class="resto-grid">
+
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">El Cubano · Bar &amp; Gelateria</div><div class="resto-price">€ · Economico</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍦 Granita &amp; Gelato</span><span class="resto-tag">📍 Viale dei Lidi 309</span></div>
+            <p class="resto-desc">Bar e gelateria molto amato dai locali. Famoso per la granita artigianale, le brioche con gelato (anche senza glutine) e i prezzi accessibili.</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Casa del Gelato</div><div class="resto-price">€ · Economico</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍨 Gelateria artigianale</span><span class="resto-tag">📍 Fontane Bianche</span></div>
+            <p class="resto-desc">Punto di riferimento per gli amanti del gelato artigianale a Fontane Bianche. Una sosta imperdibile dopo la spiaggia.</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Il Chioco DueEffe</div><div class="resto-price">€ · Bar</div></div>
+            <div class="resto-meta"><span class="resto-tag">🌴 Bar sulla spiaggia</span><span class="resto-tag">📍 Spiaggia di Fontane Bianche</span></div>
+            <p class="resto-desc">Bar direttamente sulla spiaggia: bevande fresche, snack e tutto il necessario per una giornata al sole.</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">La Vela · Caffè &amp; Lounge</div><div class="resto-price">€ · Bar</div></div>
+            <div class="resto-meta"><span class="resto-tag">☕ Caffetteria &amp; Gastronomia</span><span class="resto-tag">📍 Viale dei Lidi 424/b</span></div>
+            <p class="resto-desc">Caffetteria artigianale e lounge bar con banco gastronomia. Ideale per una colazione curata o una pausa con asporto.</p>
+          </div></div>
+
+        </div>
+        <div class="tip-box"><strong>💡 Il consiglio della villa:</strong> Per esperienze gastronomiche più ricercate, il centro di <strong>Siracusa (Ortigia)</strong> e la città barocca di <strong>Noto</strong> offrono una selezione straordinaria di ristoranti e osterie storiche, a soli 15–30 km dalla villa.</div>
+      </div><!-- /it -->
+
+      <!-- EN -->
+      <div class="en">
+        <p class="sec-label">🍽️ Restaurants &amp; Dining</p>
+        <div class="resto-grid" style="margin-bottom:24px;">
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Malafemmina · Restaurant &amp; Lounge Bar</div><div class="resto-price">€€€ · Upscale</div></div>
+            <div class="resto-meta"><span class="resto-tag">🦞 Fine seafood cuisine</span><span class="resto-tag">📍 ~600m · Viale dei Lidi 473</span></div>
+            <p class="resto-desc">Gourmet dining with the catch of the day in a 350-seat hall overlooking the sea. Lounge bar with handcrafted cocktails and unforgettable sunset aperitivos. Reservations recommended.</p>
+            <div class="resto-hours">📞 +39 0931 790317 · <a href="https://www.malafemminaristorante.it" style="font-size:12px;">malafemminaristorante.it</a></div>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Naos · Lounge Bar &amp; Restaurant</div><div class="resto-price">€€ · Mid-range</div></div>
+            <div class="resto-meta"><span class="resto-tag">🐟 Fish &amp; Mediterranean</span><span class="resto-tag">📍 Viale dei Lidi, Fontane Bianche</span></div>
+            <p class="resto-desc">Restaurant with lounge bar on the sea, Italian and Mediterranean cuisine. Specialties: fresh fish, antipasti, burrata. Great for aperitivos too. Highly rated by visitors (4.3/5).</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">La Capannina da Gino</div><div class="resto-price">€€ · Mid-range</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍕 Fish &amp; Pizzeria</span><span class="resto-tag">📍 Viale dei Lidi, Fontane Bianche</span></div>
+            <p class="resto-desc">One of the historic restaurants of Fontane Bianche, steps from the sea. Excellent fresh fish, pizzas and typical Sicilian dishes. Welcoming, suitable for families and groups. Open for lunch and dinner. (949 reviews, 4.0/5)</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Camomilla · Osteria sul Mare</div><div class="resto-price">€€ · Mid-range</div></div>
+            <div class="resto-meta"><span class="resto-tag">🌊 Seafront restaurant</span><span class="resto-tag">📍 Via Arianna, Fontane Bianche</span></div>
+            <p class="resto-desc">Panoramic restaurant within Lido Camomilla. Refined atmosphere, seafood cuisine with a view of the crystal waters of Fontane Bianche.</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Fontane Bianche Beach Bar</div><div class="resto-price">€ · Budget</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍝 Traditional Sicilian</span><span class="resto-tag">📍 ~400m · Viale dei Lidi 441</span></div>
+            <p class="resto-desc">The classic local trattoria: Sicilian land and sea dishes, honest food at honest prices. Informal and welcoming atmosphere.</p>
+            <div class="resto-hours">💰 Average price: €15–25 per person</div>
+          </div></div>
+
+        </div>
+        <p class="sec-label">🏖️ Beach Clubs &amp; Pizzerias</p>
+        <div class="resto-grid" style="margin-bottom:24px;">
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Marama Food · Drink · Sea</div><div class="resto-price">€€ · Mid-range</div></div>
+            <div class="resto-meta"><span class="resto-tag">🐟 Fish &amp; Pizza</span><span class="resto-tag">📍 ~450m · Via Vega</span></div>
+            <p class="resto-desc">On the sea: breakfast, fresh fish lunch, sunset aperitivos and wood-fired pizzas in the evening. Fresh ingredients, relaxed atmosphere.</p>
+            <div class="resto-hours">🕗 8:00–15:00 · 17:00–00:30 · <a href="https://www.maramasiracusa.it" style="font-size:12px;">maramasiracusa.it</a></div>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Lido Sayonara · Restaurant &amp; Pizzeria</div><div class="resto-price">€€ · Mid-range</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍕 Pizzeria &amp; Grill</span><span class="resto-tag">📍 Viale dei Lidi 523, Fontane Bianche</span></div>
+            <p class="resto-desc">Beach club with restaurant and pizzeria on the sea. Well-reviewed pizza, bar service with sandwiches, aperitivos, coffee and gelato.</p>
+          </div></div>
+
+        </div>
+        <p class="sec-label">☕ Bars · Cafés · Gelaterias</p>
+        <div class="resto-grid">
+
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">El Cubano · Bar &amp; Gelateria</div><div class="resto-price">€ · Budget</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍦 Granita &amp; Gelato</span><span class="resto-tag">📍 Viale dei Lidi 309</span></div>
+            <p class="resto-desc">Bar and gelateria much loved by locals. Famous for artisanal granita, brioche with gelato (also gluten-free) and affordable prices.</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Casa del Gelato</div><div class="resto-price">€ · Budget</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍨 Artisanal gelateria</span><span class="resto-tag">📍 Fontane Bianche</span></div>
+            <p class="resto-desc">A reference point for artisanal gelato lovers in Fontane Bianche. A must-stop after the beach.</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Il Chioco DueEffe</div><div class="resto-price">€ · Bar</div></div>
+            <div class="resto-meta"><span class="resto-tag">🌴 Beach bar</span><span class="resto-tag">📍 Fontane Bianche Beach</span></div>
+            <p class="resto-desc">Bar directly on the beach — perfect for when you don't want to leave the sea. Fresh drinks, snacks and everything for a day in the sun.</p>
+          </div></div>
+
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">La Vela · Café &amp; Lounge</div><div class="resto-price">€ · Bar</div></div>
+            <div class="resto-meta"><span class="resto-tag">☕ Café &amp; Gastronomy</span><span class="resto-tag">📍 Viale dei Lidi 424/b</span></div>
+            <p class="resto-desc">Artisanal café and lounge bar with gastronomy counter. Perfect for a quality breakfast, coffee or a takeaway break.</p>
+          </div></div>
+
+        </div>
+        <div class="tip-box"><strong>💡 Villa tip:</strong> For a more refined dining experience, the centre of <strong>Siracusa (Ortigia)</strong> and the Baroque city of <strong>Noto</strong> offer an extraordinary selection of restaurants and historic trattorias, just 15–30 km from the villa.</div>
+      </div><!-- /en -->
+
+      <!-- DE -->
+      <div class="de">
+        <p class="sec-label">🍽️ Restaurants &amp; Küche</p>
+        <div class="resto-grid" style="margin-bottom:24px;">
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Malafemmina · Ristorante &amp; Lounge Bar</div><div class="resto-price">€€€ · Gehoben</div></div>
+            <div class="resto-meta"><span class="resto-tag">🦞 Gourmet-Meeresfrüchte</span><span class="resto-tag">📍 ~600m · Viale dei Lidi 473</span></div>
+            <p class="resto-desc">Gourmetküche mit dem Tagesfang in einem 350-Personen-Saal mit Meerblick. Lounge-Bar mit erlesenen Cocktails und unvergesslichen Sonnenuntergangs-Aperitifs. Reservierung empfohlen.</p>
+            <div class="resto-hours">📞 +39 0931 790317 · <a href="https://www.malafemminaristorante.it" style="font-size:12px;">malafemminaristorante.it</a></div>
+          </div></div>
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Naos · Lounge Bar &amp; Restaurant</div><div class="resto-price">€€ · Mittel</div></div>
+            <div class="resto-meta"><span class="resto-tag">🐟 Fisch &amp; Mediterran</span><span class="resto-tag">📍 Viale dei Lidi, Fontane Bianche</span></div>
+            <p class="resto-desc">Restaurant mit Lounge-Bar am Meer, italienische und mediterrane Küche. Spezialitäten: frischer Fisch, Antipasti, Burrata. Auch ideal für Aperitifs. Sehr beliebt bei Besuchern (4,3/5).</p>
+          </div></div>
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">La Capannina da Gino</div><div class="resto-price">€€ · Mittel</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍕 Fisch &amp; Pizzeria</span><span class="resto-tag">📍 Viale dei Lidi, Fontane Bianche</span></div>
+            <p class="resto-desc">Eines der historischen Lokale von Fontane Bianche, direkt am Meer. Ausgezeichneter frischer Fisch, Pizzen und typisch sizilianische Gerichte. Für Familien und Gruppen geeignet. (949 Bewertungen, 4,0/5)</p>
+          </div></div>
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Camomilla · Osteria sul Mare</div><div class="resto-price">€€ · Mittel</div></div>
+            <div class="resto-meta"><span class="resto-tag">🌊 Restaurant mit Meerblick</span><span class="resto-tag">📍 Via Arianna, Fontane Bianche</span></div>
+            <p class="resto-desc">Panoramarestaurant im Lido Camomilla. Raffiniertes Ambiente, Meeresküche mit Blick auf das kristallklare Wasser von Fontane Bianche.</p>
+          </div></div>
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Fontane Bianche Beach Bar</div><div class="resto-price">€ · Günstig</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍝 Traditionell sizilianisch</span><span class="resto-tag">📍 ~400m · Viale dei Lidi 441</span></div>
+            <p class="resto-desc">Die typische lokale Trattoria: sizilianische Gerichte, ehrliches Essen zu ehrlichen Preisen. Informelle Atmosphäre.</p>
+            <div class="resto-hours">💰 Durchschnittspreis: 15–25 € pro Person</div>
+          </div></div>
+        </div>
+        <p class="sec-label">🏖️ Strandlokale &amp; Pizzerien</p>
+        <div class="resto-grid" style="margin-bottom:24px;">
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Marama Food · Drink · Sea</div><div class="resto-price">€€ · Mittel</div></div>
+            <div class="resto-meta"><span class="resto-tag">🐟 Fisch &amp; Pizza</span><span class="resto-tag">📍 ~450m · Via Vega</span></div>
+            <p class="resto-desc">Am Meer: Frühstück, Mittagessen mit frischem Fisch, Aperitifs und holzofengebackene Pizzen abends.</p>
+            <div class="resto-hours">🕗 8:00–15:00 · 17:00–00:30 · <a href="https://www.maramasiracusa.it" style="font-size:12px;">maramasiracusa.it</a></div>
+          </div></div>
+          <div class="resto-card"><div class="resto-accent"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Lido Sayonara · Restaurant &amp; Pizzeria</div><div class="resto-price">€€ · Mittel</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍕 Pizzeria &amp; Grill</span><span class="resto-tag">📍 Viale dei Lidi 523, Fontane Bianche</span></div>
+            <p class="resto-desc">Badebetrieb mit Restaurant und Pizzeria am Meer. Gute Pizza, Bar-Service mit Sandwiches, Aperitifs, Kaffee und Eis.</p>
+          </div></div>
+        </div>
+        <p class="sec-label">☕ Bars · Cafés · Eisdielen</p>
+        <div class="resto-grid">
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">El Cubano · Bar &amp; Gelateria</div><div class="resto-price">€ · Günstig</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍦 Granita &amp; Eis</span><span class="resto-tag">📍 Viale dei Lidi 309</span></div>
+            <p class="resto-desc">Bar und Eisdiele, bei Einheimischen sehr beliebt. Bekannt für handwerkliche Granita und Brioche mit Speiseeis (auch glutenfrei).</p>
+          </div></div>
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Casa del Gelato</div><div class="resto-price">€ · Günstig</div></div>
+            <div class="resto-meta"><span class="resto-tag">🍨 Handwerkliche Eisdiele</span><span class="resto-tag">📍 Fontane Bianche</span></div>
+            <p class="resto-desc">Anlaufstelle für Liebhaber handwerklichen Speiseeises in Fontane Bianche. Ein Muss nach dem Strand.</p>
+          </div></div>
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">Il Chioco DueEffe</div><div class="resto-price">€ · Bar</div></div>
+            <div class="resto-meta"><span class="resto-tag">🌴 Strandbar</span><span class="resto-tag">📍 Strand Fontane Bianche</span></div>
+            <p class="resto-desc">Bar direkt am Strand — ideal, wenn man das Meer nicht verlassen möchte. Erfrischende Getränke und Snacks.</p>
+          </div></div>
+          <div class="resto-card"><div class="resto-accent" style="background:var(--gold-light);"></div><div class="resto-body">
+            <div class="resto-head"><div class="resto-name">La Vela · Café &amp; Lounge</div><div class="resto-price">€ · Bar</div></div>
+            <div class="resto-meta"><span class="resto-tag">☕ Café &amp; Gastronomie</span><span class="resto-tag">📍 Viale dei Lidi 424/b</span></div>
+            <p class="resto-desc">Handwerkliches Café und Lounge-Bar mit Gastronomietheke. Ideal für ein gutes Frühstück oder eine Pause zum Mitnehmen.</p>
+          </div></div>
+        </div>
+        <div class="tip-box"><strong>💡 Tipp der Villa:</strong> Für anspruchsvollere Erlebnisse bieten das Zentrum von <strong>Siracusa (Ortigia)</strong> und die Barockstadt <strong>Noto</strong> eine außerordentliche Auswahl an Restaurants, nur 15–30 km von der Villa entfernt.</div>
+      </div><!-- /de -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     MODAL 3 — SPIAGGE / BEACHES
+══════════════════════════════════════ -->
+<div class="panel-overlay" id="panel-mare" onclick="overlayClose(event,this)">
+  <div class="panel-box">
+    <div class="panel-hd">
+      <div class="panel-hd-icon">🏖️</div>
+      <div class="panel-hd-title">
+        <span class="it">Spiagge &amp; Attività sul mare</span>
+        <span class="en">Beaches &amp; Sea Activities</span>
+        <span class="de">Strände &amp; Meeresaktivitäten</span>
+      </div>
+      <button class="panel-close" onclick="closePanel('mare')">✕</button>
+    </div>
+    <div class="panel-bd">
+
+      <!-- IT -->
+      <div class="it">
+        <div class="beach-feature">
+          <div style="font-size:36px;margin-bottom:12px;">🏖️</div>
+          <h3>Spiaggia di Fontane Bianche</h3>
+          <p>A soli <strong style="color:var(--gold);">3 minuti a piedi</strong> dalla villa. Sabbia bianca e fine, acque basse e trasparenti — una delle spiagge più apprezzate di tutta la provincia di Siracusa.</p>
+          <div class="badge-row">
+            <span class="badge">🌊 Acque cristalline</span>
+            <span class="badge">👶 Ideale per famiglie</span>
+            <span class="badge">🌅 Tramonti spettacolari</span>
+          </div>
+        </div>
+        <div class="activity-grid">
+          <div class="activity-card"><div class="activity-icon">⛵</div><h4>Noleggio Barche</h4>
+            <p>Esplorate la costa a bordo di un gommone — anche senza patente. Baie nascoste e calette raggiungibili solo dal mare.</p>
+            <div class="link-row"><a href="https://www.sicilyboats.it">sicilyboats.it</a> · <a href="https://www.siracusarentals.com">siracusarentals.com</a></div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🤿</div><h4>Snorkeling</h4>
+            <p>I fondali della <strong>Riserva Marina del Plemmirio</strong> sono tra i più ricchi della Sicilia. Tour guidati con attrezzatura inclusa.</p>
+            <div class="link-row" style="font-size:11.5px;color:var(--text-light);">~15 min in auto</div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🚤</div><h4>Tour Costieri</h4>
+            <p>Escursioni in barca verso Arenella, Ortigia, le grotte marine di Siracusa e le calette di Vendicari.</p>
+            <div class="link-row"><a href="https://freedome.it/en/boats-rental/fontane-bianche/">freedome.it</a></div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🌊</div><h4>Aretusa Park</h4>
+            <p>Il parco acquatico di Siracusa — scivoli, area baby e punti ristoro. Perfetto per famiglie con bambini.</p>
+            <div class="link-row" style="font-size:11.5px;color:var(--text-light);">📍 Melilli · Aperto metà giugno–settembre · 9:30–18:30<br>📞 0931 765559 · <a href="https://www.aretusapark.it">aretusapark.it</a></div>
+          </div>
+        </div>
+      </div><!-- /it -->
+
+      <!-- EN -->
+      <div class="en">
+        <div class="beach-feature">
+          <div style="font-size:36px;margin-bottom:12px;">🏖️</div>
+          <h3>Fontane Bianche Beach</h3>
+          <p>Just a <strong style="color:var(--gold);">3-minute walk</strong> from the villa. White fine sand, shallow transparent waters — one of the most appreciated beaches in the entire province of Syracuse.</p>
+          <div class="badge-row">
+            <span class="badge">🌊 Crystal clear waters</span>
+            <span class="badge">👶 Family friendly</span>
+            <span class="badge">🌅 Spectacular sunsets</span>
+          </div>
+        </div>
+        <div class="activity-grid">
+          <div class="activity-card"><div class="activity-icon">⛵</div><h4>Boat Rental</h4>
+            <p>Explore the coast aboard a dinghy — no licence required. Hidden coves and bays accessible only by sea.</p>
+            <div class="link-row"><a href="https://www.sicilyboats.it">sicilyboats.it</a> · <a href="https://www.siracusarentals.com">siracusarentals.com</a></div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🤿</div><h4>Snorkeling</h4>
+            <p>The seabeds of the <strong>Plemmirio Marine Reserve</strong> are among the richest in Sicily. Guided tours with equipment included.</p>
+            <div class="link-row" style="font-size:11.5px;color:var(--text-light);">~15 min by car</div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🚤</div><h4>Coastal Tours</h4>
+            <p>Boat trips to Arenella, Ortigia, the sea caves of Siracusa and the coves of Vendicari.</p>
+            <div class="link-row"><a href="https://freedome.it/en/boats-rental/fontane-bianche/">freedome.it</a></div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🌊</div><h4>Aretusa Park</h4>
+            <p>Siracusa's water park — slides, baby area and refreshment points. Perfect for families with children.</p>
+            <div class="link-row" style="font-size:11.5px;color:var(--text-light);">📍 Melilli · Open mid-June–September · 9:30–18:30<br>📞 0931 765559 · <a href="https://www.aretusapark.it">aretusapark.it</a></div>
+          </div>
+        </div>
+      </div><!-- /en -->
+
+      <!-- DE -->
+      <div class="de">
+        <div class="beach-feature">
+          <div style="font-size:36px;margin-bottom:12px;">🏖️</div>
+          <h3>Strand Fontane Bianche</h3>
+          <p>Nur <strong style="color:var(--gold);">3 Gehminuten</strong> von der Villa entfernt. Weißer feiner Sand, flaches, klares Wasser — einer der beliebtesten Strände der Provinz Syrakus.</p>
+          <div class="badge-row">
+            <span class="badge">🌊 Kristallklares Wasser</span>
+            <span class="badge">👶 Familienfreundlich</span>
+            <span class="badge">🌅 Spektakuläre Sonnenuntergänge</span>
+          </div>
+        </div>
+        <div class="activity-grid">
+          <div class="activity-card"><div class="activity-icon">⛵</div><h4>Bootsvermietung</h4>
+            <p>Erkunden Sie die Küste mit einem Schlauchboot — auch ohne Bootsführerschein. Versteckte Buchten, die nur vom Meer aus erreichbar sind.</p>
+            <div class="link-row"><a href="https://www.sicilyboats.it">sicilyboats.it</a> · <a href="https://www.siracusarentals.com">siracusarentals.com</a></div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🤿</div><h4>Schnorcheln</h4>
+            <p>Die Unterwasserwelt des <strong>Meeresschutzgebiets Plemmirio</strong> gehört zu den reichsten Siziliens. Geführte Touren mit Ausrüstung.</p>
+            <div class="link-row" style="font-size:11.5px;color:var(--text-light);">~15 Min. mit dem Auto</div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🚤</div><h4>Küstentouren</h4>
+            <p>Bootsausflüge nach Arenella, Ortigia, die Meereshöhlen von Siracusa und die Buchten von Vendicari.</p>
+            <div class="link-row"><a href="https://freedome.it/en/boats-rental/fontane-bianche/">freedome.it</a></div>
+          </div>
+          <div class="activity-card"><div class="activity-icon">🌊</div><h4>Aretusa Park</h4>
+            <p>Wasserpark von Siracusa — Rutschen, Kleinkindbereich und Verpflegungspunkte. Perfekt für Familien mit Kindern.</p>
+            <div class="link-row" style="font-size:11.5px;color:var(--text-light);">📍 Melilli · Geöffnet Mitte Juni–September · 9:30–18:30<br>📞 0931 765559 · <a href="https://www.aretusapark.it">aretusapark.it</a></div>
+          </div>
+        </div>
+      </div><!-- /de -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     MODAL 4 — ATTRAZIONI / ATTRACTIONS
+══════════════════════════════════════ -->
+<div class="panel-overlay" id="panel-attrazioni" onclick="overlayClose(event,this)">
+  <div class="panel-box">
+    <div class="panel-hd">
+      <div class="panel-hd-icon">🏛️</div>
+      <div class="panel-hd-title">
+        <span class="it">Attrazioni &amp; Zone di interesse</span>
+        <span class="en">Attractions &amp; Points of Interest</span>
+        <span class="de">Sehenswürdigkeiten &amp; Interessante Orte</span>
+      </div>
+      <button class="panel-close" onclick="closePanel('attrazioni')">✕</button>
+    </div>
+    <div class="panel-bd">
+
+      <!-- IT -->
+      <div class="it">
+        <div class="attraction-list">
+          <div class="attraction-item"><div class="att-num">01</div><div class="att-body">
+            <h4>Siracusa &amp; Ortigia</h4>
+            <p>Patrimonio UNESCO e una delle città più belle del Mediterraneo. Da non perdere: il Duomo (sul tempio di Atena), la Fonte Aretusa, il Teatro Greco, le Latomie del Paradiso e il vivace mercato di Ortigia.</p>
+            <div class="att-dist">📍 ~15 km · circa 20 min in auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">02</div><div class="att-body">
+            <h4>Noto — La Città Barocca</h4>
+            <p>Capolavoro del barocco siciliano, Patrimonio UNESCO. Passeggiate sul Corso Vittorio Emanuele al tramonto tra palazzi dorati e chiese monumentali. Ottima anche per gastronomia: granite, pasta di mandorle, prodotti iblei.</p>
+            <div class="att-dist">📍 ~30 km · circa 25 min in auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">03</div><div class="att-body">
+            <h4>Marzamemi</h4>
+            <p>Un antico villaggio di pescatori con case color pastello, tonnara storica e piazzetta sul mare. Atmosfera bohémien, ristoranti di pesce eccellenti e uno dei tramonti più fotografati di Sicilia.</p>
+            <div class="att-dist">📍 ~45 km · circa 35 min in auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">04</div><div class="att-body">
+            <h4>Riserva Naturale di Vendicari</h4>
+            <p>Un'oasi naturalistica con lagune costiere, uccelli migratori e alcune delle spiagge più selvagge della Sicilia. Ideale per lunghe passeggiate tra natura e mare.</p>
+            <div class="att-dist">📍 ~35 km · circa 40 min in auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">05</div><div class="att-body">
+            <h4>Avola &amp; la Riviera degli Dei</h4>
+            <p>La città del Nero d'Avola DOC e delle mandorle. Centro storico a pianta esagonale unica in Italia. Ottima base per spiagge splendide come Gallina e Lido di Avola.</p>
+            <div class="att-dist">📍 ~8 km · circa 12 min in auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">06</div><div class="att-body">
+            <h4>Riserva Marina del Plemmirio</h4>
+            <p>Area marina protetta con fondali ricchi di posidonie, pesci e coralli. Meta preferita dagli appassionati di snorkeling e immersioni, raggiungibile in barca da Fontane Bianche.</p>
+            <div class="att-dist">📍 ~12 km · circa 15 min in auto</div>
+          </div></div>
+        </div>
+      </div><!-- /it -->
+
+      <!-- EN -->
+      <div class="en">
+        <div class="attraction-list">
+          <div class="attraction-item"><div class="att-num">01</div><div class="att-body">
+            <h4>Siracusa &amp; Ortigia</h4>
+            <p>UNESCO World Heritage Site and one of the most beautiful cities in the Mediterranean. Must-see: the Cathedral (built on the Temple of Athena), Arethusa Spring, Greek Theatre, Paradise Quarries and the vibrant Ortigia market.</p>
+            <div class="att-dist">📍 ~15 km · approx. 20 min by car</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">02</div><div class="att-body">
+            <h4>Noto — The Baroque City</h4>
+            <p>A masterpiece of Sicilian Baroque, UNESCO World Heritage. Stroll along Corso Vittorio Emanuele at sunset among golden palaces and monumental churches. Also excellent for gastronomy: granita, almond paste, local Iblean products.</p>
+            <div class="att-dist">📍 ~30 km · approx. 25 min by car</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">03</div><div class="att-body">
+            <h4>Marzamemi</h4>
+            <p>An ancient fishing village of rare beauty with pastel-coloured houses, a historic tonnara and a seafront square. Bohemian atmosphere, excellent fish restaurants and one of Sicily's most photographed sunsets.</p>
+            <div class="att-dist">📍 ~45 km · approx. 35 min by car</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">04</div><div class="att-body">
+            <h4>Vendicari Nature Reserve</h4>
+            <p>A nature reserve with coastal lagoons, migratory birds and some of Sicily's most wild and unspoiled beaches. Ideal for long walks between nature and the sea.</p>
+            <div class="att-dist">📍 ~35 km · approx. 40 min by car</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">05</div><div class="att-body">
+            <h4>Avola &amp; the Riviera degli Dei</h4>
+            <p>The city of Nero d'Avola DOC wine and almonds. Unique hexagonal historic centre in Italy. Great base for beautiful beaches like Gallina and Lido di Avola.</p>
+            <div class="att-dist">📍 ~8 km · approx. 12 min by car</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">06</div><div class="att-body">
+            <h4>Plemmirio Marine Reserve</h4>
+            <p>Marine protected area with seabeds rich in posidonia, fish and corals. A favourite destination for snorkelling and diving enthusiasts, reachable by boat from Fontane Bianche.</p>
+            <div class="att-dist">📍 ~12 km · approx. 15 min by car</div>
+          </div></div>
+        </div>
+      </div><!-- /en -->
+
+      <!-- DE -->
+      <div class="de">
+        <div class="attraction-list">
+          <div class="attraction-item"><div class="att-num">01</div><div class="att-body">
+            <h4>Siracusa &amp; Ortigia</h4>
+            <p>UNESCO-Welterbe und eine der schönsten Städte des Mittelmeers. Sehenswert: der Dom (auf dem Athena-Tempel erbaut), die Arethusa-Quelle, das griechische Theater, die Latomien del Paradiso und der lebhafte Markt von Ortigia.</p>
+            <div class="att-dist">📍 ~15 km · ca. 20 Min. mit dem Auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">02</div><div class="att-body">
+            <h4>Noto — Die Barockstadt</h4>
+            <p>Ein Meisterwerk des sizilianischen Barocks, UNESCO-Welterbe. Spaziergang auf dem Corso Vittorio Emanuele bei Sonnenuntergang zwischen goldenen Palästen und monumentalen Kirchen. Gastronomisch empfehlenswert: Granita, Marzipan, ibleische Produkte.</p>
+            <div class="att-dist">📍 ~30 km · ca. 25 Min. mit dem Auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">03</div><div class="att-body">
+            <h4>Marzamemi</h4>
+            <p>Ein altes Fischerdorf mit pastellfarbenen Häusern, historischer Tonnara und einem Platz am Meer. Böhmische Atmosphäre, ausgezeichnete Fischrestaurants und einer der meistfotografierten Sonnenuntergänge Siziliens.</p>
+            <div class="att-dist">📍 ~45 km · ca. 35 Min. mit dem Auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">04</div><div class="att-body">
+            <h4>Naturreservat Vendicari</h4>
+            <p>Ein Naturschutzgebiet mit Küstenlagunen, Zugvögeln und einigen der wildesten Strände Siziliens. Ideal für lange Spaziergänge zwischen Natur und Meer.</p>
+            <div class="att-dist">📍 ~35 km · ca. 40 Min. mit dem Auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">05</div><div class="att-body">
+            <h4>Avola &amp; die Riviera degli Dei</h4>
+            <p>Die Stadt des Nero d'Avola DOC-Weins und der Mandeln. Einzigartiger sechseckiger historischer Kern in Italien. Guter Ausgangspunkt für Strände wie Gallina und Lido di Avola.</p>
+            <div class="att-dist">📍 ~8 km · ca. 12 Min. mit dem Auto</div>
+          </div></div>
+          <div class="attraction-item"><div class="att-num">06</div><div class="att-body">
+            <h4>Meeresschutzgebiet Plemmirio</h4>
+            <p>Meeresschutzgebiet mit Seegraswiesen, Fischen und Korallen. Beliebtes Ziel für Schnorchel- und Tauchbegeisterte, vom Boot aus Fontane Bianche erreichbar.</p>
+            <div class="att-dist">📍 ~12 km · ca. 15 Min. mit dem Auto</div>
+          </div></div>
+        </div>
+      </div><!-- /de -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     MODAL 5 — SPESA / SHOPPING
+══════════════════════════════════════ -->
+<div class="panel-overlay" id="panel-spesa" onclick="overlayClose(event,this)">
+  <div class="panel-box">
+    <div class="panel-hd">
+      <div class="panel-hd-icon">🛒</div>
+      <div class="panel-hd-title">
+        <span class="it">Spesa &amp; Servizi utili</span>
+        <span class="en">Shopping &amp; Useful Services</span>
+        <span class="de">Einkaufen &amp; Nützliche Dienste</span>
+      </div>
+      <button class="panel-close" onclick="closePanel('spesa')">✕</button>
+    </div>
+    <div class="panel-bd">
+
+      <!-- IT -->
+      <div class="it">
+        <div class="shop-list">
+          <div class="shop-item"><div class="shop-icon-wrap">🏪</div><div class="shop-info">
+            <h4>Holiday Market</h4>
+            <p><strong>📍 Viale dei Lidi 424/a, Fontane Bianche</strong> — a ~400m dalla villa</p>
+            <p>Il minimarket più vicino alla villa: prodotti freschi, pane, bevande, articoli da spiaggia e tutto il necessario per la giornata.</p>
+            <span class="shop-chip">🛍️ Minimarket</span><span class="shop-chip">🏖️ ~400m</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🥐</div><div class="shop-info">
+            <h4>Forno Tortuga — Gastronomia</h4>
+            <p><strong>📍 Viale dei Lidi 436, Fontane Bianche</strong> — a ~450m dalla villa</p>
+            <p>Gastronomia e forno artigianale: arancini, calzoni fritti, pizzette e cornetti al pistacchio. Prezzi imbattibili e porzioni generose.</p>
+            <span class="shop-chip">🥖 Forno &amp; Gastronomia</span><span class="shop-chip">🏖️ ~450m</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🍞</div><div class="shop-info">
+            <h4>Panificio Antico Forno Carbè</h4>
+            <p><strong>📍 Viale dei Lidi 315, Fontane Bianche</strong> — a ~2,5 km · 5 min in auto</p>
+            <p>Panificio artigianale storico della zona. Pane fresco, prodotti da forno tipici siciliani e pasticceria.</p>
+            <div style="margin-top:4px;font-size:12px;color:var(--text-light);">🕗 Lun–Sab 7:00–14:00 e 17:30–20:00 · Domenica chiuso</div>
+            <span class="shop-chip">🍞 Panificio</span><span class="shop-chip">🚗 ~2,5 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🛒</div><div class="shop-info">
+            <h4>ARD Supermercati — Cassibile</h4>
+            <p><strong>📍 Via dei Glicini 3, Cassibile (SR)</strong> — a ~2 km dalla villa</p>
+            <p>Supermercato ben fornito per una spesa completa: frutta, verdura, carne, pesce confezionato e prodotti locali siciliani.</p>
+            <span class="shop-chip">🛒 Supermercato</span><span class="shop-chip">🚗 ~2 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🏬</div><div class="shop-info">
+            <h4>Conad — Avola</h4>
+            <p><strong>📍 Contrada Merlino, Avola (96012)</strong> — a ~10 km dalla villa</p>
+            <p>Grande supermercato con ampia selezione di prodotti. Ideale per una spesa completa.</p>
+            <span class="shop-chip">🛒 Supermercato</span><span class="shop-chip">🚗 ~10 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🏬</div><div class="shop-info">
+            <h4>Superconveniente — Avola</h4>
+            <p><strong>📍 Via Caduti di Nassirya 4/6, Avola (96012)</strong> — a ~10 km dalla villa</p>
+            <p>Grande distribuzione del Gruppo Arena con ampia scelta di prodotti.</p>
+            <div style="margin-top:4px;font-size:12px;color:var(--text-light);">🕗 Lun–Dom 8:00–21:00</div>
+            <span class="shop-chip">🏬 Supermercato</span><span class="shop-chip">🚗 ~10 km</span>
+          </div></div>
+        </div>
+        <div class="tip-box" style="margin-top:16px;"><strong>💡 Suggerimento:</strong> Il mercato di <strong>Siracusa (Ortigia)</strong> e quello di <strong>Avola</strong> sono ideali per prodotti tipici: pistacchio di Bronte, mandorle di Avola, caponata artigianale e il celebre <em>Nero d'Avola</em>.</div>
+      </div><!-- /it -->
+
+      <!-- EN -->
+      <div class="en">
+        <div class="shop-list">
+          <div class="shop-item"><div class="shop-icon-wrap">🏪</div><div class="shop-info">
+            <h4>Holiday Market</h4>
+            <p><strong>📍 Viale dei Lidi 424/a, Fontane Bianche</strong> — ~400m from the villa</p>
+            <p>The closest minimarket to the villa: fresh produce, bread, drinks, beach essentials and everything you need for the day.</p>
+            <span class="shop-chip">🛍️ Minimarket</span><span class="shop-chip">🏖️ ~400m</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🥐</div><div class="shop-info">
+            <h4>Forno Tortuga — Gastronomy</h4>
+            <p><strong>📍 Viale dei Lidi 436, Fontane Bianche</strong> — ~450m from the villa</p>
+            <p>Artisanal bakery and gastronomy full of Sicilian specialties: arancini, fried calzoni, pizzette and pistachio cornetti for breakfast. Unbeatable prices.</p>
+            <span class="shop-chip">🥖 Bakery &amp; Deli</span><span class="shop-chip">🏖️ ~450m</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🍞</div><div class="shop-info">
+            <h4>Panificio Antico Forno Carbè</h4>
+            <p><strong>📍 Viale dei Lidi 315, Fontane Bianche</strong> — ~2.5 km · 5 min by car</p>
+            <p>Historic artisanal bakery. Fresh bread, typical Sicilian baked goods and pastries.</p>
+            <div style="margin-top:4px;font-size:12px;color:var(--text-light);">🕗 Mon–Sat 7:00–14:00 and 17:30–20:00 · Closed Sunday</div>
+            <span class="shop-chip">🍞 Bakery</span><span class="shop-chip">🚗 ~2.5 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🛒</div><div class="shop-info">
+            <h4>ARD Supermarket — Cassibile</h4>
+            <p><strong>📍 Via dei Glicini 3, Cassibile (SR)</strong> — ~2 km from the villa</p>
+            <p>Well-stocked supermarket for a complete shop: fruit, vegetables, meat, packaged fish and local Sicilian products.</p>
+            <span class="shop-chip">🛒 Supermarket</span><span class="shop-chip">🚗 ~2 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🏬</div><div class="shop-info">
+            <h4>Conad — Avola</h4>
+            <p><strong>📍 Contrada Merlino, Avola (96012)</strong> — ~10 km from the villa</p>
+            <p>Large supermarket with a wide product selection. Ideal for a full weekly shop.</p>
+            <span class="shop-chip">🛒 Supermarket</span><span class="shop-chip">🚗 ~10 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🏬</div><div class="shop-info">
+            <h4>Superconveniente — Avola</h4>
+            <p><strong>📍 Via Caduti di Nassirya 4/6, Avola (96012)</strong> — ~10 km from the villa</p>
+            <p>Arena Group large-format supermarket with a wide range of products.</p>
+            <div style="margin-top:4px;font-size:12px;color:var(--text-light);">🕗 Mon–Sun 8:00–21:00</div>
+            <span class="shop-chip">🏬 Supermarket</span><span class="shop-chip">🚗 ~10 km</span>
+          </div></div>
+        </div>
+        <div class="tip-box" style="margin-top:16px;"><strong>💡 Tip:</strong> The markets in <strong>Siracusa (Ortigia)</strong> and <strong>Avola</strong> are ideal for local products: Bronte pistachios, Avola almonds, artisanal caponata and the famous <em>Nero d'Avola</em> wine.</div>
+      </div><!-- /en -->
+
+      <!-- DE -->
+      <div class="de">
+        <div class="shop-list">
+          <div class="shop-item"><div class="shop-icon-wrap">🏪</div><div class="shop-info">
+            <h4>Holiday Market</h4>
+            <p><strong>📍 Viale dei Lidi 424/a, Fontane Bianche</strong> — ~400m von der Villa</p>
+            <p>Das nächste Minimarket: frische Produkte, Brot, Getränke, Strandartikel und alles Nötige für den Tag.</p>
+            <span class="shop-chip">🛍️ Minimarket</span><span class="shop-chip">🏖️ ~400m</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🥐</div><div class="shop-info">
+            <h4>Forno Tortuga — Gastronomie</h4>
+            <p><strong>📍 Viale dei Lidi 436, Fontane Bianche</strong> — ~450m von der Villa</p>
+            <p>Handwerkliche Bäckerei und Gastronomie: Arancini, gebratene Calzoni, Pizzette und Pistaziencornetti. Unschlagbare Preise.</p>
+            <span class="shop-chip">🥖 Bäckerei &amp; Deli</span><span class="shop-chip">🏖️ ~450m</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🍞</div><div class="shop-info">
+            <h4>Panificio Antico Forno Carbè</h4>
+            <p><strong>📍 Viale dei Lidi 315, Fontane Bianche</strong> — ~2,5 km · 5 Min. mit dem Auto</p>
+            <p>Historische handwerkliche Bäckerei. Frisches Brot, typisch sizilianische Backwaren und Gebäck.</p>
+            <div style="margin-top:4px;font-size:12px;color:var(--text-light);">🕗 Mo–Sa 7:00–14:00 und 17:30–20:00 · Sonntag geschlossen</div>
+            <span class="shop-chip">🍞 Bäckerei</span><span class="shop-chip">🚗 ~2,5 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🛒</div><div class="shop-info">
+            <h4>ARD Supermarkt — Cassibile</h4>
+            <p><strong>📍 Via dei Glicini 3, Cassibile (SR)</strong> — ~2 km von der Villa</p>
+            <p>Gut sortierter Supermarkt: Obst, Gemüse, Fleisch, verpackter Fisch und lokale sizilianische Produkte.</p>
+            <span class="shop-chip">🛒 Supermarkt</span><span class="shop-chip">🚗 ~2 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🏬</div><div class="shop-info">
+            <h4>Conad — Avola</h4>
+            <p><strong>📍 Contrada Merlino, Avola (96012)</strong> — ~10 km von der Villa</p>
+            <p>Großer Supermarkt mit breitem Sortiment. Ideal für einen vollständigen Wocheneinkauf.</p>
+            <span class="shop-chip">🛒 Supermarkt</span><span class="shop-chip">🚗 ~10 km</span>
+          </div></div>
+          <div class="shop-item"><div class="shop-icon-wrap">🏬</div><div class="shop-info">
+            <h4>Superconveniente — Avola</h4>
+            <p><strong>📍 Via Caduti di Nassirya 4/6, Avola (96012)</strong> — ~10 km von der Villa</p>
+            <p>Großdistribution der Arena-Gruppe mit breitem Warenangebot.</p>
+            <div style="margin-top:4px;font-size:12px;color:var(--text-light);">🕗 Mo–So 8:00–21:00</div>
+            <span class="shop-chip">🏬 Supermarkt</span><span class="shop-chip">🚗 ~10 km</span>
+          </div></div>
+        </div>
+        <div class="tip-box" style="margin-top:16px;"><strong>💡 Tipp:</strong> Die Märkte in <strong>Siracusa (Ortigia)</strong> und <strong>Avola</strong> sind ideal für typische Produkte: Bronte-Pistazien, Avola-Mandeln, handwerkliche Caponata und den berühmten <em>Nero d'Avola</em>.</div>
+      </div><!-- /de -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     MODAL 6 — EMERGENZE / EMERGENCIES
+══════════════════════════════════════ -->
+<div class="panel-overlay" id="panel-emergenze" onclick="overlayClose(event,this)">
+  <div class="panel-box">
+    <div class="panel-hd">
+      <div class="panel-hd-icon">🚨</div>
+      <div class="panel-hd-title">
+        <span class="it">Emergenze &amp; Numeri utili</span>
+        <span class="en">Emergencies &amp; Useful Numbers</span>
+        <span class="de">Notfälle &amp; Nützliche Nummern</span>
+      </div>
+      <button class="panel-close" onclick="closePanel('emergenze')">✕</button>
+    </div>
+    <div class="panel-bd">
+
+      <div class="sos-banner">
+        <div class="sos-num">112</div>
+        <div class="sos-label">
+          <span class="it">Numero Unico di Emergenza<br>Carabinieri · Polizia · Soccorso</span>
+          <span class="en">Single Emergency Number<br>Police · Fire · Ambulance</span>
+          <span class="de">Einheitliche Notrufnummer<br>Polizei · Feuerwehr · Rettungsdienst</span>
+        </div>
+      </div>
+
+      <!-- IT -->
+      <div class="it">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-card-icon">🏥</div>
+            <h4>Pronto Soccorso</h4>
+            <p><strong>Presidio Ospedaliero G. Di Maria</strong><br>SS115, Chiusa Di Carlo, Avola (96012)<br>📞 0931 582111<br>📍 ~10 km · ~12 min in auto</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📞</div>
+            <h4>Altri numeri utili</h4>
+            <ul>
+              <li>🚑 Ambulanza: <strong>118</strong></li>
+              <li>🚒 Vigili del Fuoco: <strong>115</strong></li>
+              <li>👮 Polizia: <strong>113</strong></li>
+              <li>🌊 Guardia Costiera: <strong>1530</strong></li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">💊</div>
+            <h4>Farmacia</h4>
+            <p>La farmacia più vicina si trova a <strong>Cassibile</strong> (~2 km) o ad <strong>Avola</strong> (~8 km). Farmacia di turno notturna: chiamare il <strong>118</strong>.</p>
+          </div>
+        </div>
+        <div class="contact-block">
+          <p>Per qualsiasi necessità durante il soggiorno, siamo sempre disponibili:</p>
+          <div class="contact-buttons">
+            <a href="https://wa.me/message/F3Z67R53OTYYF1" class="btn-wa">💬 WhatsApp</a>
+            <a href="mailto:info@villa-almare.it" class="btn-outline">✉️ info@villa-almare.it</a>
+            <a href="tel:+393515522487" class="btn-outline">📞 +39 351 552 2487</a>
+          </div>
+        </div>
+      </div><!-- /it -->
+
+      <!-- EN -->
+      <div class="en">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-card-icon">🏥</div>
+            <h4>Emergency Room</h4>
+            <p><strong>Presidio Ospedaliero G. Di Maria</strong><br>SS115, Chiusa Di Carlo, Avola (96012)<br>📞 0931 582111<br>📍 ~10 km · ~12 min by car</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📞</div>
+            <h4>Other useful numbers</h4>
+            <ul>
+              <li>🚑 Ambulance: <strong>118</strong></li>
+              <li>🚒 Fire Brigade: <strong>115</strong></li>
+              <li>👮 Police: <strong>113</strong></li>
+              <li>🌊 Coast Guard: <strong>1530</strong></li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">💊</div>
+            <h4>Pharmacy</h4>
+            <p>The nearest pharmacy is in <strong>Cassibile</strong> (~2 km) or in <strong>Avola</strong> (~8 km). For night-duty pharmacy: call <strong>118</strong>.</p>
+          </div>
+        </div>
+        <div class="contact-block">
+          <p>For any assistance during your stay, we are always available:</p>
+          <div class="contact-buttons">
+            <a href="https://wa.me/message/F3Z67R53OTYYF1" class="btn-wa">💬 WhatsApp</a>
+            <a href="mailto:info@villa-almare.it" class="btn-outline">✉️ info@villa-almare.it</a>
+            <a href="tel:+393515522487" class="btn-outline">📞 +39 351 552 2487</a>
+          </div>
+        </div>
+      </div><!-- /en -->
+
+      <!-- DE -->
+      <div class="de">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-card-icon">🏥</div>
+            <h4>Notaufnahme</h4>
+            <p><strong>Presidio Ospedaliero G. Di Maria</strong><br>SS115, Chiusa Di Carlo, Avola (96012)<br>📞 0931 582111<br>📍 ~10 km · ~12 Min. mit dem Auto</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📞</div>
+            <h4>Weitere Nummern</h4>
+            <ul>
+              <li>🚑 Krankenwagen: <strong>118</strong></li>
+              <li>🚒 Feuerwehr: <strong>115</strong></li>
+              <li>👮 Polizei: <strong>113</strong></li>
+              <li>🌊 Küstenwache: <strong>1530</strong></li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">💊</div>
+            <h4>Apotheke</h4>
+            <p>Die nächste Apotheke befindet sich in <strong>Cassibile</strong> (~2 km) oder in <strong>Avola</strong> (~8 km). Nachtdienst-Apotheke: <strong>118</strong> anrufen.</p>
+          </div>
+        </div>
+        <div class="contact-block">
+          <p>Bei Bedarf stehen wir jederzeit für Sie zur Verfügung:</p>
+          <div class="contact-buttons">
+            <a href="https://wa.me/message/F3Z67R53OTYYF1" class="btn-wa">💬 WhatsApp</a>
+            <a href="mailto:info@villa-almare.it" class="btn-outline">✉️ info@villa-almare.it</a>
+            <a href="tel:+393515522487" class="btn-outline">📞 +39 351 552 2487</a>
+          </div>
+        </div>
+      </div><!-- /de -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://www.villa-almare.it">🌐 villa-almare.it</a>
+    <a href="mailto:info@villa-almare.it">✉️ info@villa-almare.it</a>
+    <a href="tel:+393515522487">📞 +39 351 552 2487</a>
+  </div>
+  <div class="footer-div"></div>
+  <p>© 2025 <strong>Villa Almarè</strong> · Via Grado 5, Fontane Bianche, Siracusa 96100</p>
+  <p style="margin-top:5px;">
+    <span class="it">Questa guida è riservata agli ospiti della villa</span>
+    <span class="en">This guide is reserved for villa guests</span>
+    <span class="de">Dieser Leitfaden ist ausschließlich für Villengäste bestimmt</span>
+  </p>
+</footer>
+
+
+<script>
+  /* ── Language switching ── */
+  function setLang(lang) {
+    var html = document.documentElement;
+    html.classList.remove('lang-en', 'lang-de');
+    ['it','en','de'].forEach(function(l) {
+      document.getElementById('btn-' + l).classList.remove('active');
+    });
+    if (lang === 'en') { html.classList.add('lang-en'); html.lang = 'en'; }
+    else if (lang === 'de') { html.classList.add('lang-de'); html.lang = 'de'; }
+    else { html.lang = 'it'; }
+    document.getElementById('btn-' + lang).classList.add('active');
+    try { localStorage.setItem('va-lang', lang); } catch(e) {}
+  }
+  (function() {
+    try {
+      var l = localStorage.getItem('va-lang');
+      if (l === 'en' || l === 'de') setLang(l);
+    } catch(e) {}
+  })();
+
+  /* ── Modal panels ── */
+  function openPanel(id) {
+    document.getElementById('panel-' + id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePanel(id) {
+    document.getElementById('panel-' + id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function overlayClose(e, overlay) {
+    if (e.target === overlay) {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.panel-overlay.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+</body>
+</html>
